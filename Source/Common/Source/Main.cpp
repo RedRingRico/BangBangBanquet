@@ -9,6 +9,7 @@ int main( int p_Argc, char **p_ppArgv )
 	std::cout << "\tHash: " << GIT_COMMITHASH << std::endl;
 	std::cout << "\tDate: " << GIT_COMMITTERDATE << std::endl;
 	std::cout << "\tTag: " << GIT_TAG_NAME << std::endl;
+	std::cout << "\tBranch: " << GIT_BRANCH << std::endl;
 
 	BBB::Game TheGame;
 

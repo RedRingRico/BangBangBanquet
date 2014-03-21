@@ -44,12 +44,10 @@ namespace BBB
 				{
 					if( p_pFilePath[ i ] == '.' )
 					{
-						zedTrace( "Dot\n" );
 						if( DoubleDot == ZED_TRUE )
 						{
 							if( p_pFilePath[ ++i ] == '/' )
 							{
-								zedTrace( "Found slash\n" );
 								++DirectoryUpCount;
 								DoubleDot = ZED_FALSE;
 								StartingPoint = i + 1;

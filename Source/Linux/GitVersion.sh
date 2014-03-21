@@ -6,6 +6,7 @@ GITDATE=`git log --pretty=format:"%cd" -1`
 GITROLLINGCOUNT=`git log --pretty=format:'' | wc -l`
 GITHEADER=$1
 PROJECT=`echo $2 | awk '{print toupper( $0 )}'`
+BRANCH=`git rev-parse --abbrev-ref HEAD`
 
 TAG_NAME=`git describe --tags | sed -e 's/_[0-9].*//'`
 VERSION_NUM=""
@@ -41,7 +42,8 @@ then
 	printf "#define GIT_REVISION_BUILD_NUM		%d\n" $REVISION_BUILD_NUM >> $GITHEADER
 	printf "#define GIT_BUILD_NUM				%d\n" $BUILD_NUM >> $GITHEADER
 	printf "#define GIT_BUILD_VERSION			\"%d.%d.%d.%d\"\n" $MAJOR_BUILD_NUM $MINOR_BUILD_NUM $REVISION_BUILD_NUM $BUILD_NUM >> $GITHEADER
-	printf "#define GIT_TAG_NAME				\"%s\"\n\n" $TAG_NAME >> $GITHEADER
+	printf "#define GIT_TAG_NAME				\"%s\"\n" $TAG_NAME >> $GITHEADER
+	printf "#define GIT_BRANCH					\"%s\"\n\n" $BRANCH >> $GITHEADER
 fi
 printf "#endif\n" >> $GITHEADER
 
