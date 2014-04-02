@@ -1,5 +1,5 @@
-#ifndef ___GAME_HPP__
-#define ___GAME_HPP__
+#ifndef __BANGBANGBANQUET_GAME_HPP__
+#define __BANGBANGBANQUET_GAME_HPP__
 
 #include <System/DataTypes.hpp>
 #include <System/Window.hpp>
@@ -36,5 +36,5 @@ namespace BBB
 	};
 }
 
-#endif
+#endif // __BANGBANGBANQUET_GAME_HPP__
 

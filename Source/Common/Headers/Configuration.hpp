@@ -1,5 +1,5 @@
-#ifndef ___CONFIGURATION_HPP__
-#define ___CONFIGURATION_HPP__
+#ifndef __BANGBANGBANQUET_CONFIGURATION_HPP__
+#define __BANGBANGGANQUET_CONFIGURATION_HPP__
 
 #include <System/DataTypes.hpp>
 #include <System/NativeFile.hpp>
@@ -61,5 +61,5 @@ namespace BBB
 	};
 }
 
-#endif // ___CONFIGURATION_HPP__
+#endif // __BANGBANGBANQUET_CONFIGURATION_HPP__
 
