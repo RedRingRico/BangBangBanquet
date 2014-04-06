@@ -36,8 +36,8 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <OutputPath>..\..\Bin\Windows\Debug</OutputPath>
-	<IntermediateOutputPath>..\..\Obj\Bin\Windows\Debug</IntermediateOutputPath>
-	<BaseIntermediateOutputPath>..\..\Obj\Bin\Windows\Debug</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\..\Obj\Bin\Windows\Debug</IntermediateOutputPath>
+    <BaseIntermediateOutputPath>..\..\Obj\Bin\Windows\Debug</BaseIntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoStdLib>true</NoStdLib>
@@ -48,12 +48,12 @@
     <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
     <PlatformTarget>x86</PlatformTarget>
     <XnaCompressContent>false</XnaCompressContent>
-	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <OutputPath>..\..\Bin\Windows\Release</OutputPath>
-	<IntermediateOutputPath>..\..\Obj\Windows\Release</IntermediateOutputPath>
-	<BaseIntermediateOutputPath>..\..\Obj\Windows\Release</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\..\Obj\Windows\Release</IntermediateOutputPath>
+    <BaseIntermediateOutputPath>..\..\Obj\Windows\Release</BaseIntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoStdLib>true</NoStdLib>
@@ -63,12 +63,12 @@
     <DefineConstants>TRACE;WINDOWS</DefineConstants>
     <PlatformTarget>x86</PlatformTarget>
     <XnaCompressContent>true</XnaCompressContent>
-	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Profile|x86' ">
     <OutputPath>..\..\Bin\Windows\Profile</OutputPath>
-	<IntermediateOutputPath>..\..\Obj\Windows\Profile</IntermediateOutputPath>
-	<BaseIntermediateOutputPath>..\..\Obj\Windows\Profile</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\..\Obj\Windows\Profile</IntermediateOutputPath>
+    <BaseIntermediateOutputPath>..\..\Obj\Windows\Profile</BaseIntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoStdLib>true</NoStdLib>
@@ -78,12 +78,15 @@
     <DefineConstants>TRACE;WINDOWS;DEBUG;PROFILE</DefineConstants>
     <PlatformTarget>x86</PlatformTarget>
     <XnaCompressContent>true</XnaCompressContent>
-	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DataTypes.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="Renderer\Renderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
@@ -166,7 +169,6 @@
   <PropertyGroup>
     <PreBuildEvent>cscript $(SolutionDir)AssemblyInfo.jse /config:$(Configuration) /assemblyinfotmpl:$(ProjectDir)Properties\AssemblyInfo.cs.tmpl /assemblyinfo:$(ProjectDir)Properties\AssemblyInfo.cs</PreBuildEvent>
   </PropertyGroup>
-
   <!--
       To modify your build process, add your task inside one of the targets below and uncomment it. 
       Other similar extension points exist, see Microsoft.Common.targets.

@@ -24,40 +24,40 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\..\Bin\Xbox 360\Debug</OutputPath>
-	<IntermediateOutputPath>..\..\Obj\Xbox 360\Debug</IntermediateOutputPath>
-	<BaseIntermediateOutputPath>..\..\Obj\Xbox 360\Debug</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\..\Obj\Xbox 360\Debug</IntermediateOutputPath>
+    <BaseIntermediateOutputPath>..\..\Obj\Xbox 360\Debug</BaseIntermediateOutputPath>
     <DefineConstants>DEBUG;TRACE;XBOX;XBOX360</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoStdLib>true</NoStdLib>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <XnaCompressContent>true</XnaCompressContent>
-	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Xbox 360' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\..\Bin\Xbox 360\Release</OutputPath>
-	<IntermediateOutputPath>..\..\Obj\Xbox 360\Release</IntermediateOutputPath>
-	<BaseIntermediateOutputPath>..\..\Obj\Xbox 360\Release</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\..\Obj\Xbox 360\Release</IntermediateOutputPath>
+    <BaseIntermediateOutputPath>..\..\Obj\Xbox 360\Release</BaseIntermediateOutputPath>
     <DefineConstants>TRACE;XBOX;XBOX360</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoStdLib>true</NoStdLib>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <XnaCompressContent>true</XnaCompressContent>
-	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Xbox 360' ">
     <DebugType>pdbonly</DebugType>
-	<Optimize>true</Optimize>
-	<OutputPath>..\..\Bin\Xbox 360\Profile</OutputPath>
-	<IntermediateOutputPath>..\..\Obj\Xbox 360\Profile</IntermediateOutputPath>
-	<BaseIntermediateOutputPath>..\..\Obj\Xbox 360\Profile</BaseIntermediateOutputPath>
-	<DefineConstants>TRACE;XBOX;XBOX360;DEBUG;PROFILE</DefineConstants>
-	<ErrorReport>prompt</ErrorReport>
-	<WarningLevel>4</WarningLevel>
-	<NoStdLib>true</NoStdLib>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin\Xbox 360\Profile</OutputPath>
+    <IntermediateOutputPath>..\..\Obj\Xbox 360\Profile</IntermediateOutputPath>
+    <BaseIntermediateOutputPath>..\..\Obj\Xbox 360\Profile</BaseIntermediateOutputPath>
+    <DefineConstants>TRACE;XBOX;XBOX360;DEBUG;PROFILE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <XnaCompressContent>true</XnaCompressContent>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -110,9 +110,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataTypes.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="Renderer\Renderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
@@ -123,7 +126,6 @@
   <PropertyGroup>
     <PreBuildEvent>cscript $(SolutionDir)AssemblyInfo.jse /config:$(Configuration) /assemblyinfotmpl:$(ProjectDir)Properties\AssemblyInfo.cs.tmpl /assemblyinfo:$(ProjectDir)Properties\AssemblyInfo.cs</PreBuildEvent>
   </PropertyGroup>
-
   <!--
       To modify your build process, add your task inside one of the targets below and uncomment it. 
       Other similar extension points exist, see Microsoft.Common.targets.
