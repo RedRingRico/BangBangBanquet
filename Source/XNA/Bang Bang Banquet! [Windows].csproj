@@ -86,6 +86,8 @@
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="Renderer\Mesh.cs" />
+    <Compile Include="Renderer\Model.cs" />
     <Compile Include="Renderer\Renderer.cs" />
   </ItemGroup>
   <ItemGroup>
