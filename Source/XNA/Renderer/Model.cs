@@ -37,10 +37,12 @@ namespace BangBangBanquet.Renderer
 		}
 	}
 
-	//[StructLayout(LayoutKind.Pack)]
+	[ StructLayout( LayoutKind.Explicit ) ]
 	public struct ModelHeader
 	{
-		public char ID0, ID1, ID2, ID3;
+		[ FieldOffset( 0 ) ]
+		public char ID;
+		[ FieldOffset( 4 ) ]
 		public uint MeshCount;
 	}
 }

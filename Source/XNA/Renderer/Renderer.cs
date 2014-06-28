@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace BangBangBanquet.Renderer
 {
-	class Renderer
+	public class Renderer
 	{
 		public Renderer( )
 		{
